@@ -1,0 +1,298 @@
+/* 🌟 Keyframes for Glossy Silver Animation */
+@keyframes silverShine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 🌟 Glossy Silver Background */
+body {
+    background: linear-gradient(270deg, #F2F2F2, #C0C0C0, #A9A9A9, #F2F2F2);
+    background-size: 400% 400%;
+    animation: silverShine 3s infinite linear;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Header Styling */
+header {
+    background: linear-gradient(90deg, #0044cc, #0099ff);
+    color: white;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 68, 204, 0.6);
+}
+
+/* 🏛️ Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 🏫 Institute Logo */
+.header-logo {
+    width: 120px; /* Increased size */
+    height: auto;
+    margin-right: 20px; /* Spacing between logo and title */
+}
+
+/* 🏆 Achievements Section */
+#achievements {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(180deg, #003366, #00509E);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+
+/* 📦 Achievements Grid Layout */
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 💠 Achievement Box Styling */
+.achievement-box {
+    background: linear-gradient(145deg, #007bff, #e0f0ff);
+    color: #003366;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 15px;
+    text-align: center;
+    width: 180px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0044cc;
+}
+
+/* 📌 Navigation Bar */
+nav {
+    background: linear-gradient(90deg, #0044cc, #0099ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 68, 204, 0.4);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 📌 Main Menu Styling */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+/* 🔗 Menu Links */
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔽 Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #007bff;
+    border-radius: 10px;
+    min-width: 200px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown Menu Links */
+.dropdown-menu a {
+    padding: 12px 20px;
+    display: block;
+    border-radius: 0;
+    color: white;
+}
+
+/* 🔄 Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 🏆 Highlighted Section Headers */
+.highlight-header {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #0044cc, #0099ff);
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 68, 204, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* 📌 Section Container */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #00509E;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+    color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🏆 Ensure Section Containers Exist */
+section {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📜 Text Content */
+.text-content {
+    width: 55%;
+}
+
+/* 🖼️ Image Placeholder */
+.image-placeholder {
+    width: 40%;
+    height: 200px;
+    background: #DCDCDC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+/* 📩 Contact Section */
+#contact {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: linear-gradient(180deg, #003366, #00509E);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 📞 Contact Info */
+.contact-info {
+    font-size: 1.2rem;
+    text-align: left;
+    flex: 1;
+}
+
+/* 🌐 Social Icons */
+.social-icons img {
+    width: 30px;
+    margin: 10px;
+    filter: brightness(0) invert(1);
+}
+
+/* 📷 Contact Image Placeholder */
+.contact-image-placeholder {
+    width: 300px;
+    height: 180px;
+    background: #DCDCDC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    flex: 1;
+}
+/* Footer Container */
+#footer {
+    background-color: #003366; /* Dark Blue Background */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px; /* Adjust height */
+}
+
+/* Logo Styling */
+.footer-logo {
+    flex: 0 0 auto; /* Prevents logo from resizing */
+}
+
+.footer-logo img {
+    height: 60px; /* Adjust height to fit well */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Left spacing */
+    display: block;
+}
+
+/* Address Styling */
+.footer-address {
+    flex: 1; /* Pushes address to the right */
+    text-align: right; /* Right align text */
+    margin-right: 20px; /* Space from the right edge */
+}
+
+.footer-address p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.footer-address strong {
+    font-size: 16px;
+    color: #FFD700; /* Gold color for emphasis */
+}
