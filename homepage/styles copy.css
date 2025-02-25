@@ -1,0 +1,284 @@
+/* 🌟 Global Styles */
+:root {
+    --primary-blue: #003366;
+    --secondary-blue: #00509E;
+    --light-blue: #E6F0FF;
+    --gold-color: #FFD700;
+    --white: #FFFFFF;
+    --black: #333333;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --font-family: Arial, sans-serif;
+    --neon-blue: #00ffff; /* Neon blue color */
+    --neon-glow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 40px var(--neon-blue);
+}
+
+/* 🌟 Body */
+body {
+    background: var(--light-blue);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+}
+
+/* 🔹 Header with Neon Glow */
+header {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: var(--neon-glow); /* Neon glow effect */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Push logos to the extremes */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Adjust based on your layout */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding */
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 5px var(--neon-blue)); /* Neon glow effect for logos */
+}
+
+.header-container h1 {
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center the text */
+    flex: 1; /* Allow the text to take up remaining space */
+    text-shadow: var(--neon-glow); /* Neon glow effect for text */
+}
+
+/* 📌 Navigation Bar with Neon Glow */
+nav {
+    background: var(--primary-blue);
+    padding: 15px 30px;
+    box-shadow: var(--neon-glow); /* Neon glow effect */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-shadow: var(--neon-glow); /* Neon glow effect for links */
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: var(--neon-glow); /* Neon glow effect on hover */
+    transform: translateY(-2px);
+}
+
+/* 🔽 Dropdown Menu with Neon Glow */
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--secondary-blue);
+    border-radius: 10px;
+    min-width: 200px;
+    display: none;
+    box-shadow: var(--neon-glow); /* Neon glow effect */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* 🏆 People Section with Neon Glow */
+.people-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--primary-blue);
+    border-radius: 15px;
+    color: var(--white);
+    box-shadow: var(--neon-glow); /* Neon glow effect */
+}
+
+.people-section:nth-child(even) {
+    background: var(--secondary-blue);
+}
+
+.people-category {
+    margin-top: 20px;
+}
+
+.person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    color: var(--black);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: var(--neon-glow); /* Neon glow effect */
+    transition: transform 0.3s ease;
+}
+
+.person:nth-child(odd) {
+    background: var(--light-blue);
+}
+
+.person:hover {
+    transform: translateY(-5px);
+}
+
+.person-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.person h3 {
+    margin-top: 0;
+    color: var(--primary-blue);
+    text-shadow: var(--neon-glow); /* Neon glow effect for headings */
+}
+
+.person p {
+    margin: 5px 0;
+}
+
+.person ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--gold-color);
+    box-shadow: var(--neon-glow); /* Neon glow effect for profile pictures */
+}
+
+/* Publications Section with Neon Glow */
+.publications {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.3s ease;
+    padding: 0 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.person:hover .publications {
+    max-height: 300px; /* Set a fixed height for the scrollable area */
+    padding: 10px;
+    opacity: 1; /* Show on hover */
+    visibility: visible; /* Show on hover */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.publication-category {
+    margin-bottom: 15px;
+}
+
+.publication-category h5 {
+    margin: 10px 0 5px 0;
+    color: #0044cc;
+    text-shadow: var(--neon-glow); /* Neon glow effect for subheadings */
+}
+
+.publication-category ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.publication-category ul li {
+    margin-bottom: 5px;
+}
+
+.publication-category ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    text-shadow: var(--neon-glow); /* Neon glow effect for links */
+}
+
+.publication-category ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 📌 Footer with Neon Glow */
+#footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Space out logo and address */
+    align-items: center; /* Vertically center items */
+    width: 100%;
+    box-shadow: var(--neon-glow); /* Neon glow effect */
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 5px var(--neon-blue)); /* Neon glow effect for logos */
+}
+
+.footer-address {
+    text-align: right; /* Align address text to the right */
+}
+
+.footer-address p {
+    margin: 3px 0;
+    font-size: 14px;
+    text-shadow: var(--neon-glow); /* Neon glow effect for text */
+}
+
+.footer-address strong {
+    font-size: 16px;
+    color: var(--gold-color);
+    text-shadow: var(--neon-glow); /* Neon glow effect for strong text */
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .person {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-top: 10px;
+    }
+
+    #footer {
+        flex-direction: column; /* Stack logo and address vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .footer-address {
+        text-align: center; /* Center-align address text */
+        margin-top: 10px; /* Add spacing between logo and address */
+    }
+}
