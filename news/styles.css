@@ -1,0 +1,249 @@
+/* 🌟 Global Styles */
+:root {
+    --primary-blue: #003366;
+    --secondary-blue: #00509E;
+    --light-blue: #E6F0FF;
+    --gold-color: #FFD700;
+    --white: #FFFFFF;
+    --black: #333333;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --font-family: Arial, sans-serif;
+}
+
+/* 🌟 Body */
+body {
+    background: var(--light-blue);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    color: var(--black);
+}
+
+/* 🔹 Header */
+header {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Push logos to the extremes */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px; /* Adjust based on your layout */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add some padding */
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+}
+
+.header-container h1 {
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center the text */
+    flex: 1; /* Allow the text to take up remaining space */
+}
+
+/* 📌 Navigation Bar */
+nav {
+    background: var(--primary-blue);
+    padding: 15px 30px;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+/* 🔽 Dropdown Menu */
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--secondary-blue);
+    border-radius: 10px;
+    min-width: 200px;
+    display: none;
+    box-shadow: var(--shadow);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-menu a {
+    padding: 12px 20px;
+    display: block;
+    border-radius: 0;
+    color: var(--white);
+}
+
+/* 🖼 Slideshow Styling */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* News Section Styling */
+.news {
+    text-align: left;
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.news h2 {
+    text-align: center;
+    color: var(--primary-blue);
+}
+
+.news ul {
+    list-style: none;
+    padding: 0;
+}
+
+.news li {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* 📌 Footer */
+#footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Space out logo and address */
+    align-items: center; /* Vertically center items */
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-address {
+    text-align: right; /* Align address text to the right */
+}
+
+.footer-address p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.footer-address strong {
+    font-size: 16px;
+    color: var(--gold-color);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-logo {
+        margin: 10px 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .slideshow-container {
+        height: 250px;
+    }
+
+    .news {
+        padding: 20px;
+    }
+
+    #footer {
+        flex-direction: column; /* Stack logo and address vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .footer-address {
+        text-align: center; /* Center-align address text */
+        margin-top: 10px; /* Add spacing between logo and address */
+    }
+}
